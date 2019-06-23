@@ -1,0 +1,548 @@
+/*==============================================
+|     |      | Mobile Menu section
+==============================================*/
+.navbar-header {
+    position: relative;
+}
+
+#mobile-nav-open-btn {
+    font-size: 30px;
+    color: #f4c613;
+    z-index: 2;
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    /*hide mobile nav open btn*/
+    /*it will hide the menu*/
+    display: none;
+}
+
+#mobile-nav {
+    /*By Default mobile nav will be hidden with height: 0% */
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+    /*it will hide the menu*/
+    overflow-y: hidden;
+}
+
+#mobile-nav-close-btn {
+    font-family: "Railway", sans-serif;
+    font-size: 70px;
+    color: #212226;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    top: -9px;
+    right: 13px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+#mobile-nav-content {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    top: 10%;
+}
+
+#mobile-nav ul li {
+    margin-bottom: 20px;
+}
+
+#mobile-nav a {
+    font-family: "Railway", san-serif;
+    font-size: 18px;
+    color: #212226;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+#mobile-nav a: hover,
+#mobile-nav a: focus,
+#mobile-nav-close-btn: hover,
+#mobile-nav-close-btn: focus {
+    color: #f4c613;
+    background: none;
+}
+
+/* mobile nav scroll spy active state*/
+.white-nav-top #mobile-nav ul.nav > li.active > a {
+    color: #f4c613;
+    font-weight: 500;
+}
+
+
+/*==============================================
+|     |      | Bootstrap 3 Media Queries 
+==============================================*/
+/*Large Devices (desktop laptop)*/
+@media(min-width:1200px) and (max-width: 1299px) {
+
+    /*#home-heading h1{
+		color: blue;
+	}*/
+
+    /*navigation bar*/
+    .site-nav-wrapper {
+        padding: 0 20px;
+    }
+
+}
+
+/*Medium Devices (landscap tablet and medium desktop)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /*#home-heading h1{
+		color: red;
+	}*/
+    /*navigation bar*/
+    .site-nav-wrapper {
+        padding: 0px;
+    }
+
+    .vertical-heading h2 {
+        font-size: 29px;
+    }
+
+    /*services 02*/
+    #services-tabs .tab-bg {
+        padding: 16px 30px;
+        min-height: 325px;
+    }
+
+    .service-tab {
+        margin: 0 auto;
+    }
+
+    .service-tab p {
+        line-height: 20px;
+    }
+}
+
+/*small devices (Portarat Tablets and 900px Small Desktop)*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /*#home-heading h1{
+		color: green;
+	}*/
+    /*navigation bar*/
+    .site-nav-wrapper {
+        padding: 0px;
+    }
+
+    /*home*/
+    #home-heading h1 {
+        font-size: 41px;
+    }
+
+    #home-heading p {
+        font-size: 13px;
+    }
+
+    .btn-general {
+        padding: 8px 35px 8px 35px;
+        font-size: 10px;
+    }
+
+    .vertical-heading h2 {
+        font-size: 29px;
+    }
+
+    /* Tech statement*/
+    #tech-statement h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #services-01 img {
+        margin-top: 80px;
+        margin: 0 auto;
+    }
+
+    /*services -02*/
+    .r-tabs-accordion-title {
+        text-align: center;
+        margin-bottom: 10px
+    }
+
+    .r-tabs-accordion-title a {
+        font-family: "Railway", sans-serif;
+        font-size: 13px;
+        color: #212226;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 0px;
+        text-decoration: none;
+    }
+
+    .r-tabs-state-active.r-tabs-accordion-title a {
+        color: #f4c613;
+        font-weight: 700;
+        border-bottom: 3px solid #f4c613;
+        padding-bottom: 5px;
+        -webkit-transition: border-color 300ms linear;
+        transition: border-color 300ms linear;
+    }
+
+    .service-tab.r-tabs-panel.r-tabs-state-active {
+        margin: 0 auto;
+    }
+
+    /*pricing table*/
+    .pricing-table .price h2 {
+        margin: 0 0 0 6px;
+        font-size: 35px;
+    }
+
+    /*blog*/
+    .blog-post .post-meta p {
+        line-height: 14px;
+    }
+
+    /*stats*/
+    .stats-item p {
+        line-height: 18px;
+    }
+
+    /*contact*/
+    ul.office-details li {
+        margin-right: 15px;
+    }
+
+    .ul.office-details li i {
+        width: 25px;
+
+    }
+
+}
+
+/*Extrasmall devices (Landscap Phone and Portatetablate)*/
+@media (max-width: 767px) {
+
+    /*Mobile Menu Open Button*/
+    .navbar {
+        padding: 20px 0px;
+    }
+
+    .site-nav-wrapper,
+    .white-nav-top {
+        padding: 0px;
+    }
+
+    #mobile-nav-open-btn {
+        /*it will display the mobile menu for 767 or below the rang*/
+        display: block;
+    }
+
+    /*	#home-heading/*home*/
+    #home-heading h1 {
+        font-size: 22px;
+    }
+
+    #home-heading p {
+        font-size: 13px;
+        line-height: 18px;
+        margin: 8px 2px 30px 2px;
+    }
+
+    .btn-general {
+        padding: 8px 25px 6px 25px;
+        font-size: 10px;
+    }
+
+    /* h1{
+		color: pink;
+	}*/
+
+    /*services*/
+    #services-01 img {
+        margin: 0 auto;
+    }
+
+    /*about*/
+    .content-box-lg {
+        padding: 90px 0px;
+    }
+
+    /*vertical heading*/
+    .vertical-heading {
+        text-align: center;
+    }
+
+    .vertical-heading h5 {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        display: block;
+        position: static;
+        margin-bottom: 15px;
+    }
+
+    .verticla-heading h2 {
+        font-size: 29px;
+        line-height: normal;
+        margin: 0px;
+    }
+
+    #about-left {
+        margin-bottom: 50px;
+    }
+
+    #about-right {
+        text-align: center;
+    }
+
+    /*about 02*/
+    .content-box-md {
+        padding: 80px 0px;
+    }
+
+    .about-item {
+        padding: 55px 30px;
+        margin-bottom: 35px;
+    }
+
+    .about-item i {
+        font-size: 30px;
+    }
+
+    .about-item h3 {
+        font-size: 18px;
+    }
+
+    /*team*/
+    #team-left .vertical-heading {
+        min-height: 130px;
+    }
+
+    .vertical-heading p {
+        margin: 8px;
+        margin-top: 39px;
+    }
+
+    /*progress bar*/
+    .skill h4 {
+        line-height: 35px;
+        font-size: 14px;
+    }
+
+    #tech-statement h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /*service 01*/
+    /*hrizontal-heading*/
+    .horizontal-heading {
+        margin-bottom: 40px;
+    }
+
+    .horizontal-heading h2 {
+        font-size: 30px;
+    }
+
+    .service {
+        text-align: center;
+    }
+
+    .service,
+    .service .icon {
+        text-align: center;
+    }
+
+    .service h4 {
+        font-size: 18px;
+    }
+
+    .r-tabs-accordion-title {
+        text-align: center;
+        margin-bottom: 10px
+    }
+
+    .r-tabs-accordion-title a {
+        font-family: "Railway", sans-serif;
+        font-size: 13px;
+        color: #212226;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 0px;
+        text-decoration: none;
+    }
+
+    .r-tabs-state-active.r-tabs-accordion-title a {
+        color: #f4c613;
+        font-weight: 700;
+        border-bottom: 3px solid #f4c613;
+        padding-bottom: 5px;
+        -webkit-transition: border-color 300ms linear;
+        transition: border-color 300ms linear;
+    }
+
+    .service-tab.r-tabs-panel.r-tabs-state-active {
+        margin: 0 auto;
+    }
+
+    .service-tab .tab-bg {
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    /*portfolio*/
+    #portfolio {
+        padding-bottom: 0px;
+    }
+
+    #testimonials .vertical-heading {
+        margin-bottom: -9px;
+    }
+
+    #isotope-filters button {
+        padding-right: 15px;
+    }
+
+    /*testimonial */
+    #testimonials {
+        padding-top: 45px;
+    }
+
+    .testimonial h3 {
+        font-size: 20px;
+    }
+
+    .testimonial .stars {
+        font-size: 16px;
+    }
+
+    .author img {
+        width: 80px !important;
+    }
+
+    /*pricing*/
+
+    .pricing-table {
+        margin-bottom: 32px;
+    }
+
+    .pricing-table .price h2 {
+        font-size: 28px;
+        margin: 0 0 0 16px;
+    }
+
+    /*stat*/
+    .stats-item {
+        margin-bottom: 20px;
+        padding: 25px 5px;
+    }
+
+    .stats-item i {
+        font-size: 30px;
+    }
+
+    .stats-item h3 {
+        font-size: 24px;
+    }
+
+    /*blog*/
+    #blog-left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .blog-post {
+        margin-bottom: 25px;
+    }
+
+    /*contact*/
+    #contact-left {
+        text-align: center;
+    }
+
+    .office {
+        margin-bottom: 50px;
+    }
+
+    ul.office-details li {
+        display: block;
+        margin-top: 25px;
+    }
+
+    ul.office-details li i {
+        width: auto;
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    ul.social-list {
+        margin-bottom: 40px;
+    }
+
+}
+
+/*Extrasmall devices (potrat Phone and smaller devices)*/
+@media (max-width: 480px) {
+
+    /*	#home-heading/*home*/
+    #home-heading h1 {
+        font-size: 18px;
+    }
+
+    #home-heading p {
+        font-size: 11px;
+        line-height: 16px;
+        margin: 8px 10px 25px 10px;
+    }
+
+    .btn-general {
+        padding: 8px 25px 6px 25px;
+        font-size: 10px;
+    }
+
+    .vertical-heading h2 {
+        font-size: 22px;
+    }
+
+    #isotope-filters {
+        text-align: center;
+    }
+
+    /*testimonial*/
+    .testimonial h3 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .testimonial .stars {
+        font-size: 13px;
+    }
+
+
+}
+
+/*@media*/
+
+/*Extrasmall devices (potrat Phone and smaller devices like iphone 5)*/
+@media (max-width: 320px) {
+
+    /*testimonial*/
+    .testimonial h3 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .testimonial .stars {
+        font-size: 10px;
+    }
+
+}
+
+/*@media*/
